@@ -1,0 +1,1 @@
+window.GmapFontAwesome = window.GmapFontAwesome || {};

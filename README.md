@@ -8,17 +8,36 @@ Add this line to your application's Gemfile:
 
     gem 'gmap-fontawesome'
 
-And then execute:
+If you want the last gliph then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install gmap-fontawesome
+    $ bundle exec rake gmap_awesome:compile  
+    
+Else you can use the precompiled version and pass to the next step
 
 ## Usage
 
-TODO: Write usage instructions here
+include in your javascript file
+
+    //= require gmap-fontawesome
+
+
+All glyphs have the same names as font-awesome, except they are capitalised, and underscored, eg "exclamation-sign" becomes "EXCLAMATION_SIGN"
+
+    new google.maps.Marker({
+        map: map,
+        icon: {
+            path: GMAP_FA.EXCLAMATION,
+            scale: 0.5,
+            strokeWeight: 0.2,
+            strokeColor: 'black',
+            strokeOpacity: 1,
+            fillColor: '#f8ae5f',
+            fillOpacity: 0.7,
+        },
+        clickable: false,
+        position: new google.maps.LatLng(lat, lng)
+    });
+
 
 ## Contributing
 

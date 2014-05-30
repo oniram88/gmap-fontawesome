@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email = ["marinobonetti@gmail.com"]
   spec.summary = %q{Font awesome svg path is for google maps}
   spec.description = %q{Font-awesome svg path is for google maps, whith rake task to download and compile the last version of the icons }
-  spec.homepage = ""
+  spec.homepage = "https://github.com/oniram88/gmap-fontawesome"
   spec.license = "MIT"
 
   spec.files = `git ls-files -z`.split("\x0")
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib,vendor"]
 
 
-  spec.add_dependency 'rubyzip'
+  spec.add_runtime_dependency 'rubyzip', '~> 1.1', '>= 1.1.3'
   spec.add_development_dependency "bundler", "~> 1.5"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency 'rake', '~> 10.3', '>= 10.3.2'
 end

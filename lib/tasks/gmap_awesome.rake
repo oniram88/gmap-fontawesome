@@ -45,7 +45,7 @@ namespace :gmap_awesome do
             # puts m.inspect
             vars << {
                 :code => m[:code].gsub("\\", ''),
-                :name => m[:name].gsub(/\-/,'_'),
+                :name => m[:name].gsub(/\-/,'_').upcase,
                 :value => nil
             }
           end
@@ -54,7 +54,7 @@ namespace :gmap_awesome do
       end
 
 
-      puts "Compilazione"
+      puts "Compilation"
       svg_content = File.read(File.join(path, "fonts", 'fontawesome-webfont.svg'))
 
 
@@ -73,7 +73,7 @@ namespace :gmap_awesome do
       File.open(File.join(vendor, 'gmap-fontawesome.js'), 'w') do |f|
         string = []
         vars.reject { |v| v[:value].empty? }.each do |v|
-          string<< "#{v[:name]}='#{v[:value]}'"
+          string<< "#{v[:name]}:'#{v[:value]}'"
         end
         f.write("window.GMAP_FA = {\n#{string.join("\n,")}\n};")
       end

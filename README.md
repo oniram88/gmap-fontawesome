@@ -1,6 +1,6 @@
 # Gmap::Fontawesome
 
-TODO: Write a gem description
+You can use this gem to display the Font-awesome icons as markers in google-maps 
 
 ## Installation
 
@@ -8,11 +8,11 @@ Add this line to your application's Gemfile:
 
     gem 'gmap-fontawesome'
 
-If you want the last gliph then execute:
+If you want the last gliphs then execute:
 
     $ bundle exec rake gmap_awesome:compile  
     
-Else you can use the precompiled version and pass to the next step
+Else you can use the precompiled version and go to the next step
 
 ## Usage
 
@@ -27,7 +27,8 @@ All glyphs have the same names as font-awesome, except they are capitalised, and
         map: map,
         icon: {
             path: GMAP_FA.EXCLAMATION,
-            scale: 0.5,
+            scale:0.02,
+            rotation:180,
             strokeWeight: 0.2,
             strokeColor: 'black',
             strokeOpacity: 1,

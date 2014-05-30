@@ -4,19 +4,19 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'gmap/fontawesome/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "gmap-fontawesome"
-  spec.version       = Gmap::Fontawesome::VERSION
-  spec.authors       = ["Marino"]
-  spec.email         = ["marinobonetti@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.name = "gmap-fontawesome"
+  spec.version = Gmap::Fontawesome::VERSION
+  spec.authors = ["Marino"]
+  spec.email = ["marinobonetti@gmail.com"]
+  spec.summary = %q{Font awesome svg path is for google maps}
+  spec.description = %q{Font-awesome svg path is for google maps, whith rake task to download and compile the last version of the icons }
+  spec.homepage = ""
+  spec.license = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  spec.files = `git ls-files -z`.split("\x0")
+  spec.executables = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib,vendor"]
 
 
   spec.add_dependency 'rubyzip'
